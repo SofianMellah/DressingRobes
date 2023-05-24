@@ -1,0 +1,145 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 150%;
+}
+
+/* Styles de l'en-tête */
+h1 {
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+/* Styles de la section principale */
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#featured-robes,
+#new-arrivals {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 2%;
+}
+
+.robe-card {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+}
+
+.robe-card img {
+    width: 100%;
+    height: 60%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.robe-card h3 {
+    margin-bottom: 10px;
+}
+
+.robe-card p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.robe-card .btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.trait {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 0.2px;
+    background-color: black;
+    transform: translateY(-50%);
+}
+
+/* Styles du pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries pour le responsive */
+@media screen and (max-width: 767px) {
+    .robe-card {
+        width: 100%;
+        /* Les cartes prendront 100% de largeur sur les petits écrans */
+    }
+
+    .trait {
+        display: none;
+        /* Masquer le trait sur les petits écrans */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .robe-card {
+        width: 60%;
+        /* Les cartes auront une largeur de 60% sur les écrans de taille moyenne */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .robe-card {
+        width: 40%;
+        /* Les cartes auront une largeur de 40% sur les écrans larges */
+    }
+}
